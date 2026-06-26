@@ -93,7 +93,7 @@ Primary files:
 3. `ArcShotVideoCompositor` renders in Core Image / Core Animation space with CI bottom-left conventions handled consistently.
 4. `ExportOutputAccess` + sandbox promotion write the final MP4.
 
-See also: [`export/PIPELINE.md`](export/PIPELINE.md), [`HANDOFF.md`](../HANDOFF.md).
+See also: [`export/PIPELINE.md`](export/PIPELINE.md), [`articles/compositor-pipeline.md`](articles/compositor-pipeline.md).
 
 ---
 

@@ -7,8 +7,7 @@ Related docs:
 
 - `docs/QUALITY_STANDARDS.md` — release bar
 - `docs/MANUAL_VERIFICATION.md` — human QA matrix
-- `HANDOFF.md` — compositor architecture history
-- `AGENTS.md` — agent workflow
+- `docs/export/PIPELINE.md` — compositor pipeline map
 
 ---
 
@@ -163,7 +162,7 @@ When changing either path, update:
 - `ArcShotTests` geometry tests
 - `ExportSmokeTests` fixture exports
 
-See `docs/PREVIEW_EXPORT_GAPS.md` for known remaining gaps.
+Known preview vs export parity risks are summarized in [`docs/export/PIPELINE.md`](export/PIPELINE.md) § preview/export parity.
 
 ---
 
@@ -190,15 +189,13 @@ Before merging PRs that touch these areas:
 
 ---
 
-## 9. Planned work (delegated — not part of 2025-06 closeout)
+## 9. Planned work (not yet invariant rules)
 
-These milestones are **taskified for other developers**. Do not start without reading the linked specs.
+Future areas that may become documented invariants after implementation and tests:
 
-| Milestone | Doc | Summary |
-| --- | --- | --- |
-| **M7** Export pipeline analysis / redesign | [`docs/NEXT_MILESTONES.md`](NEXT_MILESTONES.md) § M7 | `Exporter.swift` + compositor structure |
-| **M8** Incamera recording UX | [`docs/NEXT_MILESTONES.md`](NEXT_MILESTONES.md) § M8 | Today: `CameraMovieCapture` sidecar `.mov` only |
+| Area | Summary |
+| --- | --- |
+| **Export pipeline** | Deeper `Exporter.swift` + compositor structure work |
+| **Camera UX** | Today: `CameraMovieCapture` sidecar `.mov`; unified timeline UX TBD |
 
-**Closed baseline:** [`docs/CLOSED_MILESTONE_2025-06.md`](CLOSED_MILESTONE_2025-06.md) (PR #1 merged to `main`).
-
-When M7/M8 land stable rules, **promote** them from NEXT_MILESTONES into the numbered sections above and add tests.
+Track work in [GitHub Issues](https://github.com/mameshivaa/Arc-shot/issues). When a rule is stable, promote it into the numbered sections above and add tests.

@@ -152,7 +152,7 @@ flowchart LR
   PRJ --> EXP
 ```
 
-Deep dive: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · compositor notes: [`HANDOFF.md`](HANDOFF.md)
+Deep dive: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) · [`docs/articles/compositor-pipeline.md`](docs/articles/compositor-pipeline.md)
 
 ---
 
@@ -206,7 +206,6 @@ Set your own **Development Team** in Xcode signing settings before archiving.
 | --- | --- |
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System design for readers / recruiters |
 | [`docs/articles/compositor-pipeline.md`](docs/articles/compositor-pipeline.md) | **Technical article** — capture → compositor → export |
-| [`docs/SHOW_HN.md`](docs/SHOW_HN.md) | Draft Show HN / Reddit post (for maintainers) |
 | [`docs/INVARIANTS.md`](docs/INVARIANTS.md) | Hard rules with regression backing |
 | [`docs/QUALITY_STANDARDS.md`](docs/QUALITY_STANDARDS.md) | Release quality bar |
 | [`docs/MANUAL_VERIFICATION.md`](docs/MANUAL_VERIFICATION.md) | Manual QA matrix |

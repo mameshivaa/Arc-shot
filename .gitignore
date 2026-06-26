@@ -8,6 +8,19 @@ DerivedData/
 .ai/
 .claude/
 .serena/
+
+# Maintainer-only docs (keep in private dev repo, not public OSS)
+AGENTS.md
+CLAUDE.md
+HANDOFF.md
+docs/SHOW_HN.md
+docs/TASK_BREAKDOWN.md
+docs/IMPLEMENTATION_GOALS.md
+docs/NEXT_MILESTONES.md
+docs/CLOSED_MILESTONE_2025-06.md
+docs/PREVIEW_EXPORT_GAPS.md
+docs/AUTO_ZOOM_M4_AUDIT.md
+docs/export/COMPOSITOR_REWRITE_SPIKE.md
 *.xcuserstate
 xcuserdata/
 **/*.xcuserdatad/

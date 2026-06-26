@@ -2,6 +2,8 @@
 
 Thanks for helping improve ArcShot.
 
+This public repository includes **contributor-facing** docs only (`INVARIANTS.md`, `ARCHITECTURE.md`, tests, etc.). Internal maintainer notes (AI workflow files, sprint breakdowns, marketing drafts) stay in the private development repo.
+
 ## Development Setup
 
 1. Install Xcode 17 or newer.

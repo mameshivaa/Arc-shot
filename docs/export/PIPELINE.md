@@ -34,7 +34,6 @@ GIF export は削除済みで、ここでは現存機能として扱わない。
 | `Features/Export/ArcShotVideoCompositor.swift` | 1 frame ごとの renderer。source video、blur mask、zoom、stage、PiP、cursor/click、highlight mask、text/caption、fade を描画する。 |
 | `Features/Editor/EditorPlaybackController.swift` | preview 用の AV composition と background music/audio mix を作る。visual preview には export compositor を使っていない。 |
 | `Features/Editor/EditorLayout.swift` | preview/export 共通の geometry helper。特に `ArcShotRenderGeometry`。 |
-| `docs/PREVIEW_EXPORT_GAPS.md` | preview と export の現在の差分・リスク表。未描画機能リストではなく、残る raster parity リスクを管理する。 |
 
 `Exporter.swift` は orchestration と sandbox/output state を持つ。次に分割する場合も、M7-01/M7-02 の現状把握と parity audit を前提にする。
 
@@ -232,8 +231,6 @@ GIF 書き出しは MP4 pipeline と別物で、custom compositor、validation�
 
 ## preview/export parity の現状
 
-現在の差分表は `docs/PREVIEW_EXPORT_GAPS.md` を使う。
-
 短く言うと:
 
 - export は多くの feature で rendered-pixel smoke coverage を持っている。
@@ -265,7 +262,7 @@ M7-03 の主要分割として、composition planning、timed data mapping、out
 | `ExportVideoPipelineFactory` | `makeVideoPipeline`、`makeAudioPipeline`、instruction builder input、reader/writer media IO。 | 追加済み。compositor と encoding/audio settings は変更しない。 |
 | `ExportReaderWriterSession` | reader/writer 作成、media pump、progress callback、finishWriting、reader/writer failure result。 | 追加済み。promotion、UI state、access release は `Exporter` に残す。 |
 
-compositor rewrite から始めない。現行 compositor は主要な instruction-carried visual features をすでに描画しており、export smoke coverage もある。M7-04 の spike 結果は [`COMPOSITOR_REWRITE_SPIKE.md`](COMPOSITOR_REWRITE_SPIKE.md) を参照する。
+compositor rewrite から始めない。現行 compositor は主要な instruction-carried visual features をすでに描画しており、export smoke coverage もある。
 
 ## この領域を守るテスト
 
