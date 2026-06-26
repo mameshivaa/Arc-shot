@@ -222,6 +222,8 @@ Regenerate marketing screenshots (requires local sample projects + screen record
 ./Scripts/capture-app-screenshots.sh
 ```
 
+**Social preview:** upload [`docs/assets/social-preview.png`](docs/assets/social-preview.png) (1280×640) in GitHub → Settings → General → Social preview.
+
 ---
 
 ## Support & license
