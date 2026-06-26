@@ -1,5 +1,9 @@
 # ArcShot
 
+<p align="center">
+  <img src="docs/assets/app-icon.png" alt="ArcShot app icon" width="128" height="128" />
+</p>
+
 > **Swift-native macOS demo recorder** — floating launcher, multi-track timeline, custom `AVVideoCompositing` export.  
 > **$7.99 one-time** · **full source on GitHub** · **260+ tests** · no subscription · no Electron
 
@@ -222,7 +226,10 @@ Regenerate marketing screenshots (requires local sample projects + screen record
 ./Scripts/capture-app-screenshots.sh
 ```
 
-**Social preview:** upload [`docs/assets/social-preview.png`](docs/assets/social-preview.png) (1280×640) in GitHub → Settings → General → Social preview.
+**Social preview** (GitHub のリンク用サムネイル): upload [`docs/assets/social-preview.png`](docs/assets/social-preview.png) (1280×640) in **GitHub → Settings → General → Social preview**.  
+X や Slack でリポジトリ URL を貼ったときに出る横長画像です。README のスクショとは別枠。
+
+**App icon:** [`docs/assets/app-icon.png`](docs/assets/app-icon.png) (512×512, copy of `Resources/Assets.xcassets/AppIcon.appiconset/`).
 
 ---
 
@@ -236,6 +243,10 @@ Regenerate marketing screenshots (requires local sample projects + screen record
 ## 日本語
 
 **ArcShot** は **Swift / SwiftUI** で書いた、macOS 向けネイティブの画面録画・デモ動画エディタのオープンソース実装です。Electron でも WebView エディタでもありません。
+
+<p align="center">
+  <img src="docs/assets/app-icon.png" alt="ArcShot アプリアイコン" width="96" height="96" />
+</p>
 
 ### なぜ作ったか
 
