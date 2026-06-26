@@ -31,4 +31,4 @@ ArcShot does not sell personal data. Future versions of this policy will list an
 
 ## Contact
 
-Open an issue at https://github.com/mameshivaa/Arc-shot/issues
+For questions about the shipped app, use [GitHub Issues](https://github.com/mameshivaa/Arc-shot/issues) or the [Mac App Store listing](https://apps.apple.com/app/arcshot/id6778335789).

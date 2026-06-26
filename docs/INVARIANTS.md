@@ -8,7 +8,7 @@ Related docs:
 - `docs/QUALITY_STANDARDS.md` — release bar
 - `docs/MANUAL_VERIFICATION.md` — human QA matrix
 - `HANDOFF.md` — compositor architecture history
-- `AGENTS.md` / `CLAUDE.md` — agent workflow
+- `AGENTS.md` — agent workflow
 
 ---
 
