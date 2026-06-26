@@ -177,6 +177,9 @@ enum ScreenCaptureAccess {
 
   @MainActor
   private static func permissionState(for permission: Permission) -> PermissionState {
+    if MarketingDemoMode.isActive {
+      return .granted
+    }
     switch permission {
     case .screenRecording:
       return CGPreflightScreenCaptureAccess() ? .granted : .denied

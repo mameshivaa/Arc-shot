@@ -463,7 +463,7 @@ Status: complete on 2026-06-20.
 Scope:
 
 - Add README headline:
-  - `Open-source Screen Studio alternative for macOS`
+  - `Open-source, local-first demo-video recorder for macOS`
 - Include demo placeholder, install, build, features, architecture, roadmap, license, and signing status.
 
 Acceptance criteria:

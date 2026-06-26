@@ -2,7 +2,7 @@
 
 ## North Star
 
-ArcShot should be the open-source Screen Studio alternative for macOS.
+ArcShot should be an open-source, local-first demo-video recorder for macOS.
 
 The implementation goal is to make this promise true:
 
@@ -268,7 +268,7 @@ Start here before broader roadmap work:
 - Create a manual verification checklist file for display/window/area cursor alignment.
 - Make English the default app language.
 - Audit user-facing Japanese literals in capture errors and permission setup.
-- Add README outline focused on "open-source Screen Studio alternative for macOS."
+- Add README outline focused on "open-source, local-first demo-video recorder for macOS."
 
 ## Definition Of Done
 

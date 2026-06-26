@@ -1,0 +1,28 @@
+name: Good first issue
+description: Small, well-scoped task for new contributors
+title: "[Good first issue] "
+labels: ["good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for picking up a starter task. Please read [CONTRIBUTING.md](../CONTRIBUTING.md) and [docs/INVARIANTS.md](../docs/INVARIANTS.md) before changing capture/export code.
+  - type: textarea
+    id: goal
+    attributes:
+      label: What should this change accomplish?
+    validations:
+      required: true
+  - type: textarea
+    id: hints
+    attributes:
+      label: Hints / files to look at
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not touch capture, cursor, launcher, or export hot paths
+          required: false
+        - label: I read INVARIANTS.md because this touches a hot path
+          required: false

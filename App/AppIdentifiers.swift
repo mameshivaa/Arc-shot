@@ -36,3 +36,10 @@ enum AppIdentifiers {
     static let projectsFolderName = "Projects"
   }
 }
+
+/// Screenshot tour launches: present a clean portfolio UI without live permission gates.
+enum MarketingDemoMode {
+  static var isActive: Bool {
+    ProcessInfo.processInfo.arguments.contains("-screenshotTour")
+  }
+}

@@ -40,6 +40,16 @@ Before opening a pull request:
 - Run the full test command when touching shared export, timeline, project model, or localization behavior.
 - Describe the user-facing behavior change and any remaining risk.
 
+## Good first issues
+
+New contributors are welcome. Look for issues labeled [**good first issue**](https://github.com/mameshivaa/Arc-shot/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22):
+
+- Documentation improvements (README, export pipeline notes)
+- Test fixtures and smoke-test coverage
+- Localization string cleanup (English / Japanese)
+
+Before touching capture, cursor, launcher, or export code, read [`docs/INVARIANTS.md`](docs/INVARIANTS.md).
+
 ## Issues
 
 Useful issues include:

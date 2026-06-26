@@ -1,13 +1,16 @@
 # ArcShot Architecture
 
-ArcShot is a native macOS app for **screen capture → timeline editing → MP4 export**. This document is written for contributors, reviewers, and portfolio readers who want the system shape without reading every file.
+ArcShot is a **Swift-native** macOS app for **screen capture → timeline editing → MP4 export**. This document is written for contributors, reviewers, and portfolio readers who want the system shape without reading every file.
 
-**App Store:** [ArcShot](https://apps.apple.com/app/arcshot/id6778335789)
+**Stack:** Swift · SwiftUI · ScreenCaptureKit · AVFoundation · custom `AVVideoCompositing` · Speech (captions). No Electron, no embedded web editor.
+
+**Source:** build from this repository. Third-party Mac App Store distribution is not permitted — see [`DISTRIBUTION.md`](DISTRIBUTION.md).
 
 ---
 
 ## Design goals
 
+0. **Accessible demo-video tooling** — subscription-based demo recorders on macOS charge a lot for polish; ArcShot is Swift, one-time purchase, and open source instead.
 1. **Local-first** — projects live in sandboxed `.arcshot` packages on disk; no account or upload step.
 2. **Preview/export parity** — what you see in the editor should match exported pixels (cursor, zoom, PiP, stage, captions).
 3. **Explicit invariants** — capture, launcher, and export hot paths have documented rules and tests ([`INVARIANTS.md`](INVARIANTS.md)).

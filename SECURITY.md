@@ -4,8 +4,7 @@
 
 | Version | Supported |
 | --- | --- |
-| Latest App Store release | Yes |
-| `main` branch | Yes |
+| Latest `main` | Yes |
 | Older tags | Best effort |
 
 ## Reporting a vulnerability
@@ -13,7 +12,7 @@
 **Please do not open public GitHub issues for security vulnerabilities.**
 
 1. Open a private report via [GitHub Security Advisories](https://github.com/mameshivaa/Arc-shot/security/advisories/new) if available, **or**
-2. Email the maintainer through the contact method listed on the [Mac App Store listing](https://apps.apple.com/app/arcshot/id6778335789) support section.
+2. Open a minimal [GitHub Issue](https://github.com/mameshivaa/Arc-shot/issues/new) and ask the maintainer to enable a private channel (do not paste exploit details publicly).
 
 Include:
 

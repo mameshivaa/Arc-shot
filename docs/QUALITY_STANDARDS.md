@@ -2,7 +2,7 @@
 
 ## Goal
 
-ArcShot should become the open-source Screen Studio alternative for macOS:
+ArcShot should become an open-source, local-first demo-video recorder for macOS:
 
 - Native Swift/SwiftUI, ScreenCaptureKit, AVFoundation, and Metal/Core Image.
 - Local-first by default.
@@ -61,7 +61,7 @@ ArcShot should not try to beat every competitor everywhere.
 
 | Competitor | Their strength | ArcShot quality target |
 | --- | --- | --- |
-| Screen Studio | Polished demo output | Similar visual quality, free OSS, local-first, native architecture |
+| Premium subscription demo recorder | Polished demo output | Similar visual quality, free OSS, local-first, native architecture |
 | OpenScreen | Star power and feature volume | Better Mac-native reliability and easier local build/run story |
 | ScreenArc | OSS auto pan/zoom editor | More credible native macOS implementation and permissive license |
 | Tella/Loom | Cloud sharing and teams | Better local privacy, export fidelity, and no required account |

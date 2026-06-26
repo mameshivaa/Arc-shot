@@ -1,4 +1,4 @@
-MIT License
+MIT License (with Mac App Store restriction)
 
 Copyright (c) 2026 ArcShot contributors
 
@@ -11,6 +11,16 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+Mac App Store distribution restriction
+
+The permissions above do **not** include the right to distribute the Software,
+or any derivative work based on the Software, through the Apple App Store,
+Mac App Store, TestFlight for public distribution, or any other marketplace
+operated or controlled by Apple Inc., whether free or for a fee.
+
+This restriction does not apply to distributions made by the copyright holder(s)
+listed above.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
