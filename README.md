@@ -11,6 +11,16 @@ Record from a floating launcher, edit on a multi-track timeline, and export a po
 
 [Download on the Mac App Store](https://apps.apple.com/app/arcshot/id6778335789) · [Report an issue](https://github.com/mameshivaa/Arc-shot/issues) · [Architecture](docs/ARCHITECTURE.md) · [日本語](#日本語)
 
+<p align="center">
+  <a href="https://apps.apple.com/app/arcshot/id6778335789">
+    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/ja-jp?size=250x83" alt="Download on the Mac App Store" height="50" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="docs/assets/demo-preview.gif" alt="ArcShot launcher and timeline editor preview" width="920" />
+</p>
+
 ---
 
 ## Screenshots
@@ -148,6 +158,7 @@ Set your own **Development Team** in Xcode signing settings before archiving.
 | [`docs/QUALITY_STANDARDS.md`](docs/QUALITY_STANDARDS.md) | Release quality bar |
 | [`docs/MANUAL_VERIFICATION.md`](docs/MANUAL_VERIFICATION.md) | Manual QA matrix |
 | [`docs/export/PIPELINE.md`](docs/export/PIPELINE.md) | Export pipeline map |
+| [`SECURITY.md`](SECURITY.md) | Vulnerability reporting |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guide |
 | [`PRIVACY.md`](PRIVACY.md) | Privacy policy |
 
@@ -173,6 +184,12 @@ Regenerate App Store-style screenshots (requires local sample projects + screen 
 ## 日本語
 
 **ArcShot** は、[Mac App Store](https://apps.apple.com/jp/app/arcshot/id6778335789) で配信中のネイティブ画面録画・デモ動画エディタのオープンソース版です。
+
+<p align="center">
+  <a href="https://apps.apple.com/jp/app/arcshot/id6778335789">
+    <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-mac-app-store/black/ja-jp?size=250x83" alt="Mac App Storeからダウンロード" height="50" />
+  </a>
+</p>
 
 - フローティングランチャーから画面／ウィンドウを録画
 - タイムラインでクリップ・音声・インカメをトリム

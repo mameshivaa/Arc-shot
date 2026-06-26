@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Mac App Store support
+    url: https://apps.apple.com/app/arcshot/id6778335789
+    about: Download, ratings, and App Store purchase questions
+  - name: Questions & ideas
+    url: https://github.com/mameshivaa/Arc-shot/discussions
+    about: Ask questions or share ideas (enable Discussions in repo settings if needed)
