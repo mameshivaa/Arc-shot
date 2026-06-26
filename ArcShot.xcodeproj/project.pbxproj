@@ -1,0 +1,829 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000001 /* ArcShotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000101 /* ArcShotApp.swift */; };
+		000000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000102 /* ContentView.swift */; };
+		000000000000000000000003 /* CaptureSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000103 /* CaptureSource.swift */; };
+		000000000000000000000005 /* RecordingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000105 /* RecordingCoordinator.swift */; };
+		000000000000000000000006 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000106 /* RecordView.swift */; };
+		000000000000000000000007 /* RecordingProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000107 /* RecordingProject.swift */; };
+		00000000000000000000061F /* RecordingProjectAudioMix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000620 /* RecordingProjectAudioMix.swift */; };
+		000000000000000000000627 /* RecordingAudioLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000628 /* RecordingAudioLevels.swift */; };
+		000000000000000000000008 /* ProjectStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000108 /* ProjectStore.swift */; };
+		000000000000000000000009 /* ReviewTrimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000109 /* ReviewTrimView.swift */; };
+		00000000000000000000000A /* ExportPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010A /* ExportPreset.swift */; };
+		00000000000000000000000B /* Exporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010B /* Exporter.swift */; };
+		00000000000000000000000C /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010C /* ExportView.swift */; };
+		00000000000000000000000D /* MicrophoneCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010D /* MicrophoneCapture.swift */; };
+		00000000000000000000000E /* CountdownOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010E /* CountdownOverlay.swift */; };
+		00000000000000000000000F /* RecordingWriterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000010F /* RecordingWriterSession.swift */; };
+		000000000000000000000011 /* AppAlertCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000111 /* AppAlertCenter.swift */; };
+		000000000000000000000012 /* ArcShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000112 /* ArcShotTests.swift */; };
+		000000000000000000000708 /* LocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000709 /* LocalizationTests.swift */; };
+		000000000000000000000013 /* RecordingProjectExportStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000113 /* RecordingProjectExportStyle.swift */; };
+		000000000000000000000015 /* ExportSmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000115 /* ExportSmokeTests.swift */; };
+		000000000000000000000018 /* ReviewTimelineUndoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000118 /* ReviewTimelineUndoController.swift */; };
+		000000000000000000000019 /* CursorZoomHeuristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000119 /* CursorZoomHeuristics.swift */; };
+		00000000000000000000001C /* AppIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000011C /* AppIdentifiers.swift */; };
+		000000000000000000000700 /* AppLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000703 /* AppLocalization.swift */; };
+		00000000000000000000070F /* ExportOutputAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000070E /* ExportOutputAccess.swift */; };
+		000000000000000000000701 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000704 /* Localizable.xcstrings */; };
+		000000000000000000000711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000712 /* Assets.xcassets */; };
+		000000000000000000000714 /* VisualMaskStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000715 /* VisualMaskStyle.swift */; };
+		000000000000000000000702 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000707 /* InfoPlist.strings */; };
+		000000000000000000000200 /* TimelineAudioWaveformLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000205 /* TimelineAudioWaveformLoader.swift */; };
+		000000000000000000000202 /* ExportMixedCompositionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000207 /* ExportMixedCompositionBuilder.swift */; };
+		000000000000000000000203 /* CameraMovieCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000208 /* CameraMovieCapture.swift */; };
+		000000000000000000000204 /* MultiClipCompositionDraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000209 /* MultiClipCompositionDraft.swift */; };
+		000000000000000000000210 /* CursorClickHeuristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000206 /* CursorClickHeuristics.swift */; };
+		000000000000000000000215 /* ScreenCaptureAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000216 /* ScreenCaptureAccess.swift */; };
+		000000000000000000000217 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000218 /* EditorView.swift */; };
+		00000000000000000000021A /* AppChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000021B /* AppChrome.swift */; };
+		00000000000000000000022A /* FloatingRecordingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000230 /* FloatingRecordingWidget.swift */; };
+		00000000000000000000022B /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000231 /* MenuBarController.swift */; };
+		00000000000000000000022C /* PermissionsGateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000232 /* PermissionsGateView.swift */; };
+		00000000000000000000022D /* CaptionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000233 /* CaptionGenerator.swift */; };
+		00000000000000000000022E /* VideoPreviewPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000234 /* VideoPreviewPane.swift */; };
+		00000000000000000000022F /* AspectRatioPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000235 /* AspectRatioPreset.swift */; };
+		000000000000000000000260 /* RecordingSelectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000026A /* RecordingSelectionModel.swift */; };
+		000000000000000000000262 /* RecordingSessionFinalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000026C /* RecordingSessionFinalization.swift */; };
+		000000000000000000000263 /* RecordingLauncherBarDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000026D /* RecordingLauncherBarDesign.swift */; };
+		000000000000000000000270 /* ActivityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000275 /* ActivityClassifier.swift */; };
+		000000000000000000000271 /* ZoomIntentPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000276 /* ZoomIntentPlanner.swift */; };
+		000000000000000000000272 /* SpringDamperCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000277 /* SpringDamperCamera.swift */; };
+		000000000000000000000273 /* CameraTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000278 /* CameraTrack.swift */; };
+		000000000000000000000274 /* AutoZoomPipeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000279 /* AutoZoomPipeline.swift */; };
+		00000000000000000000027A /* AutoZoomPipelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000027B /* AutoZoomPipelineTests.swift */; };
+		000000000000000000000280 /* ArcShotVideoCompositor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000284 /* ArcShotVideoCompositor.swift */; };
+		000000000000000000000281 /* ArcShotCompositionInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000285 /* ArcShotCompositionInstruction.swift */; };
+		000000000000000000000282 /* ArcShotCompositionInstructionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000286 /* ArcShotCompositionInstructionBuilder.swift */; };
+		000000000000000000000283 /* CursorRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000287 /* CursorRenderer.swift */; };
+		000000000000000000000288 /* ExportCompositionPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000289 /* ExportCompositionPlanner.swift */; };
+		00000000000000000000028A /* ExportTimedDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000028B /* ExportTimedDataMapper.swift */; };
+		00000000000000000000028C /* ExportPIPTimelineSourceMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000028D /* ExportPIPTimelineSourceMapper.swift */; };
+		00000000000000000000028E /* ExportOutputPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000028F /* ExportOutputPromotion.swift */; };
+		000000000000000000000290 /* ExportVideoPipelineFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000291 /* ExportVideoPipelineFactory.swift */; };
+		000000000000000000000292 /* ExportReaderWriterSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000293 /* ExportReaderWriterSession.swift */; };
+		000000000000000000000600 /* EditorLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000606 /* EditorLayout.swift */; };
+		000000000000000000000601 /* TimelineModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000607 /* TimelineModels.swift */; };
+		000000000000000000000602 /* EditorPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000608 /* EditorPlaybackController.swift */; };
+		000000000000000000000603 /* EditorTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000609 /* EditorTimelineView.swift */; };
+		000000000000000000000604 /* EditorTimelineTrimSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000060A /* EditorTimelineTrimSurface.swift */; };
+		000000000000000000000605 /* EditorInspectorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000060B /* EditorInspectorPanel.swift */; };
+		000000000000000000000610 /* TimelineCoordinateSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000060C /* TimelineCoordinateSpace.swift */; };
+		000000000000000000000611 /* EditorTimelinePlayheadGhostSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000612 /* EditorTimelinePlayheadGhostSurface.swift */; };
+		000000000000000000000615 /* EditorPreviewTimelineSplit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000616 /* EditorPreviewTimelineSplit.swift */; };
+		000000000000000000000617 /* ProjectStorageCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000618 /* ProjectStorageCatalog.swift */; };
+		000000000000000000000619 /* ProjectLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000061A /* ProjectLibraryView.swift */; };
+		00000000000000000000061B /* ProjectStorageCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000061C /* ProjectStorageCatalogTests.swift */; };
+		000000000000000000000623 /* CameraPiPDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000624 /* CameraPiPDefaults.swift */; };
+		000000000000000000000625 /* CameraRecordingPreviewPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000626 /* CameraRecordingPreviewPanel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000000000000000000000061 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000060 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000040;
+			remoteInfo = ArcShot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000010 /* ArcShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000014 /* ArcShotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcShotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000101 /* ArcShotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShotApp.swift; sourceTree = "<group>"; };
+		000000000000000000000102 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		000000000000000000000103 /* CaptureSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSource.swift; sourceTree = "<group>"; };
+		000000000000000000000105 /* RecordingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingCoordinator.swift; sourceTree = "<group>"; };
+		000000000000000000000106 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		000000000000000000000107 /* RecordingProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingProject.swift; sourceTree = "<group>"; };
+		000000000000000000000620 /* RecordingProjectAudioMix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingProjectAudioMix.swift; sourceTree = "<group>"; };
+		000000000000000000000628 /* RecordingAudioLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingAudioLevels.swift; sourceTree = "<group>"; };
+		000000000000000000000108 /* ProjectStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStore.swift; sourceTree = "<group>"; };
+		000000000000000000000109 /* ReviewTrimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTrimView.swift; sourceTree = "<group>"; };
+		00000000000000000000010A /* ExportPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPreset.swift; sourceTree = "<group>"; };
+		00000000000000000000010B /* Exporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exporter.swift; sourceTree = "<group>"; };
+		00000000000000000000010C /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		00000000000000000000010D /* MicrophoneCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophoneCapture.swift; sourceTree = "<group>"; };
+		00000000000000000000010E /* CountdownOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownOverlay.swift; sourceTree = "<group>"; };
+		00000000000000000000010F /* RecordingWriterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingWriterSession.swift; sourceTree = "<group>"; };
+		000000000000000000000111 /* AppAlertCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlertCenter.swift; sourceTree = "<group>"; };
+		000000000000000000000112 /* ArcShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShotTests.swift; sourceTree = "<group>"; };
+		000000000000000000000709 /* LocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationTests.swift; sourceTree = "<group>"; };
+		000000000000000000000113 /* RecordingProjectExportStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingProjectExportStyle.swift; sourceTree = "<group>"; };
+		000000000000000000000115 /* ExportSmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportSmokeTests.swift; sourceTree = "<group>"; };
+		000000000000000000000118 /* ReviewTimelineUndoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTimelineUndoController.swift; sourceTree = "<group>"; };
+		000000000000000000000119 /* CursorZoomHeuristics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorZoomHeuristics.swift; sourceTree = "<group>"; };
+		00000000000000000000011C /* AppIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIdentifiers.swift; sourceTree = "<group>"; };
+		000000000000000000000201 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000710 /* ArcShot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ArcShot.entitlements; sourceTree = "<group>"; };
+		000000000000000000000715 /* VisualMaskStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMaskStyle.swift; sourceTree = "<group>"; };
+		000000000000000000000712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000703 /* AppLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalization.swift; sourceTree = "<group>"; };
+		00000000000000000000070E /* ExportOutputAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportOutputAccess.swift; sourceTree = "<group>"; };
+		000000000000000000000704 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		000000000000000000000705 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		000000000000000000000706 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		000000000000000000000205 /* TimelineAudioWaveformLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineAudioWaveformLoader.swift; sourceTree = "<group>"; };
+		000000000000000000000206 /* CursorClickHeuristics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorClickHeuristics.swift; sourceTree = "<group>"; };
+		000000000000000000000207 /* ExportMixedCompositionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportMixedCompositionBuilder.swift; sourceTree = "<group>"; };
+		000000000000000000000208 /* CameraMovieCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraMovieCapture.swift; sourceTree = "<group>"; };
+		000000000000000000000209 /* MultiClipCompositionDraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiClipCompositionDraft.swift; sourceTree = "<group>"; };
+		000000000000000000000216 /* ScreenCaptureAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCaptureAccess.swift; sourceTree = "<group>"; };
+		000000000000000000000218 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		00000000000000000000021B /* AppChrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChrome.swift; sourceTree = "<group>"; };
+		000000000000000000000230 /* FloatingRecordingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingRecordingWidget.swift; sourceTree = "<group>"; };
+		000000000000000000000231 /* MenuBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarController.swift; sourceTree = "<group>"; };
+		000000000000000000000232 /* PermissionsGateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionsGateView.swift; sourceTree = "<group>"; };
+		000000000000000000000233 /* CaptionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionGenerator.swift; sourceTree = "<group>"; };
+		000000000000000000000234 /* VideoPreviewPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewPane.swift; sourceTree = "<group>"; };
+		000000000000000000000235 /* AspectRatioPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AspectRatioPreset.swift; sourceTree = "<group>"; };
+		00000000000000000000026A /* RecordingSelectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSelectionModel.swift; sourceTree = "<group>"; };
+		00000000000000000000026C /* RecordingSessionFinalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingSessionFinalization.swift; sourceTree = "<group>"; };
+		00000000000000000000026D /* RecordingLauncherBarDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingLauncherBarDesign.swift; sourceTree = "<group>"; };
+		000000000000000000000275 /* ActivityClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityClassifier.swift; sourceTree = "<group>"; };
+		000000000000000000000276 /* ZoomIntentPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomIntentPlanner.swift; sourceTree = "<group>"; };
+		000000000000000000000277 /* SpringDamperCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringDamperCamera.swift; sourceTree = "<group>"; };
+		000000000000000000000278 /* CameraTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTrack.swift; sourceTree = "<group>"; };
+		000000000000000000000279 /* AutoZoomPipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoZoomPipeline.swift; sourceTree = "<group>"; };
+		00000000000000000000027B /* AutoZoomPipelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoZoomPipelineTests.swift; sourceTree = "<group>"; };
+		000000000000000000000284 /* ArcShotVideoCompositor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShotVideoCompositor.swift; sourceTree = "<group>"; };
+		000000000000000000000285 /* ArcShotCompositionInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShotCompositionInstruction.swift; sourceTree = "<group>"; };
+		000000000000000000000286 /* ArcShotCompositionInstructionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcShotCompositionInstructionBuilder.swift; sourceTree = "<group>"; };
+		000000000000000000000287 /* CursorRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorRenderer.swift; sourceTree = "<group>"; };
+		000000000000000000000289 /* ExportCompositionPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportCompositionPlanner.swift; sourceTree = "<group>"; };
+		00000000000000000000028B /* ExportTimedDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportTimedDataMapper.swift; sourceTree = "<group>"; };
+		00000000000000000000028D /* ExportPIPTimelineSourceMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportPIPTimelineSourceMapper.swift; sourceTree = "<group>"; };
+		00000000000000000000028F /* ExportOutputPromotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportOutputPromotion.swift; sourceTree = "<group>"; };
+		000000000000000000000291 /* ExportVideoPipelineFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportVideoPipelineFactory.swift; sourceTree = "<group>"; };
+		000000000000000000000293 /* ExportReaderWriterSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportReaderWriterSession.swift; sourceTree = "<group>"; };
+		000000000000000000000606 /* EditorLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorLayout.swift; sourceTree = "<group>"; };
+		000000000000000000000607 /* TimelineModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineModels.swift; sourceTree = "<group>"; };
+		000000000000000000000608 /* EditorPlaybackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPlaybackController.swift; sourceTree = "<group>"; };
+		000000000000000000000609 /* EditorTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTimelineView.swift; sourceTree = "<group>"; };
+		00000000000000000000060A /* EditorTimelineTrimSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTimelineTrimSurface.swift; sourceTree = "<group>"; };
+		00000000000000000000060B /* EditorInspectorPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorInspectorPanel.swift; sourceTree = "<group>"; };
+		00000000000000000000060C /* TimelineCoordinateSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCoordinateSpace.swift; sourceTree = "<group>"; };
+		000000000000000000000612 /* EditorTimelinePlayheadGhostSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorTimelinePlayheadGhostSurface.swift; sourceTree = "<group>"; };
+		000000000000000000000616 /* EditorPreviewTimelineSplit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPreviewTimelineSplit.swift; sourceTree = "<group>"; };
+		000000000000000000000618 /* ProjectStorageCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStorageCatalog.swift; sourceTree = "<group>"; };
+		00000000000000000000061A /* ProjectLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLibraryView.swift; sourceTree = "<group>"; };
+		00000000000000000000061C /* ProjectStorageCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStorageCatalogTests.swift; sourceTree = "<group>"; };
+		000000000000000000000624 /* CameraPiPDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPiPDefaults.swift; sourceTree = "<group>"; };
+		000000000000000000000626 /* CameraRecordingPreviewPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRecordingPreviewPanel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		000000000000000000000030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000110 /* App */,
+				000000000000000000000116 /* Domain */,
+				000000000000000000000120 /* Features */,
+				000000000000000000000130 /* ArcShotTests */,
+				000000000000000000000220 /* Resources */,
+				000000000000000000000020 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		000000000000000000000020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000010 /* ArcShot.app */,
+				000000000000000000000014 /* ArcShotTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000110 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000011C /* AppIdentifiers.swift */,
+				000000000000000000000101 /* ArcShotApp.swift */,
+				000000000000000000000102 /* ContentView.swift */,
+				00000000000000000000021B /* AppChrome.swift */,
+				000000000000000000000111 /* AppAlertCenter.swift */,
+				000000000000000000000703 /* AppLocalization.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		000000000000000000000116 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000107 /* RecordingProject.swift */,
+				000000000000000000000628 /* RecordingAudioLevels.swift */,
+				000000000000000000000624 /* CameraPiPDefaults.swift */,
+				000000000000000000000620 /* RecordingProjectAudioMix.swift */,
+				000000000000000000000113 /* RecordingProjectExportStyle.swift */,
+				000000000000000000000108 /* ProjectStore.swift */,
+				000000000000000000000618 /* ProjectStorageCatalog.swift */,
+				000000000000000000000209 /* MultiClipCompositionDraft.swift */,
+				000000000000000000000235 /* AspectRatioPreset.swift */,
+				00000000000000000000027C /* AutoZoom */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		00000000000000000000027C /* AutoZoom */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000275 /* ActivityClassifier.swift */,
+				000000000000000000000276 /* ZoomIntentPlanner.swift */,
+				000000000000000000000277 /* SpringDamperCamera.swift */,
+				000000000000000000000278 /* CameraTrack.swift */,
+				000000000000000000000279 /* AutoZoomPipeline.swift */,
+			);
+			path = AutoZoom;
+			sourceTree = "<group>";
+		};
+		000000000000000000000120 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000121 /* Capture */,
+				00000000000000000000061D /* Library */,
+				000000000000000000000124 /* Editor */,
+				000000000000000000000123 /* Export */,
+				000000000000000000000122 /* Timeline */,
+				000000000000000000000236 /* Captions */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		000000000000000000000121 /* Capture */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000106 /* RecordView.swift */,
+				000000000000000000000105 /* RecordingCoordinator.swift */,
+				000000000000000000000230 /* FloatingRecordingWidget.swift */,
+				00000000000000000000026D /* RecordingLauncherBarDesign.swift */,
+				000000000000000000000231 /* MenuBarController.swift */,
+				00000000000000000000010F /* RecordingWriterSession.swift */,
+				00000000000000000000010E /* CountdownOverlay.swift */,
+				00000000000000000000010D /* MicrophoneCapture.swift */,
+				000000000000000000000208 /* CameraMovieCapture.swift */,
+				000000000000000000000626 /* CameraRecordingPreviewPanel.swift */,
+				000000000000000000000216 /* ScreenCaptureAccess.swift */,
+				000000000000000000000232 /* PermissionsGateView.swift */,
+				000000000000000000000103 /* CaptureSource.swift */,
+				00000000000000000000026A /* RecordingSelectionModel.swift */,
+				00000000000000000000026C /* RecordingSessionFinalization.swift */,
+			);
+			path = Capture;
+			sourceTree = "<group>";
+		};
+		00000000000000000000061D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000061A /* ProjectLibraryView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		000000000000000000000122 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000109 /* ReviewTrimView.swift */,
+				000000000000000000000118 /* ReviewTimelineUndoController.swift */,
+				000000000000000000000119 /* CursorZoomHeuristics.swift */,
+				000000000000000000000205 /* TimelineAudioWaveformLoader.swift */,
+				000000000000000000000206 /* CursorClickHeuristics.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		000000000000000000000123 /* Export */ = {
+			isa = PBXGroup;
+				children = (
+					00000000000000000000010C /* ExportView.swift */,
+					00000000000000000000010B /* Exporter.swift */,
+					000000000000000000000289 /* ExportCompositionPlanner.swift */,
+					00000000000000000000028B /* ExportTimedDataMapper.swift */,
+					00000000000000000000028D /* ExportPIPTimelineSourceMapper.swift */,
+					00000000000000000000028F /* ExportOutputPromotion.swift */,
+					000000000000000000000291 /* ExportVideoPipelineFactory.swift */,
+					000000000000000000000293 /* ExportReaderWriterSession.swift */,
+					000000000000000000000207 /* ExportMixedCompositionBuilder.swift */,
+					00000000000000000000010A /* ExportPreset.swift */,
+				000000000000000000000284 /* ArcShotVideoCompositor.swift */,
+				000000000000000000000285 /* ArcShotCompositionInstruction.swift */,
+				000000000000000000000286 /* ArcShotCompositionInstructionBuilder.swift */,
+				000000000000000000000287 /* CursorRenderer.swift */,
+				000000000000000000000715 /* VisualMaskStyle.swift */,
+				00000000000000000000070E /* ExportOutputAccess.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		000000000000000000000124 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000218 /* EditorView.swift */,
+				000000000000000000000234 /* VideoPreviewPane.swift */,
+				000000000000000000000606 /* EditorLayout.swift */,
+				000000000000000000000607 /* TimelineModels.swift */,
+				00000000000000000000060C /* TimelineCoordinateSpace.swift */,
+				000000000000000000000608 /* EditorPlaybackController.swift */,
+				000000000000000000000609 /* EditorTimelineView.swift */,
+				000000000000000000000612 /* EditorTimelinePlayheadGhostSurface.swift */,
+				000000000000000000000616 /* EditorPreviewTimelineSplit.swift */,
+				00000000000000000000060A /* EditorTimelineTrimSurface.swift */,
+				00000000000000000000060B /* EditorInspectorPanel.swift */,
+			);
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		000000000000000000000130 /* ArcShotTests */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000112 /* ArcShotTests.swift */,
+				000000000000000000000709 /* LocalizationTests.swift */,
+				000000000000000000000115 /* ExportSmokeTests.swift */,
+				00000000000000000000027B /* AutoZoomPipelineTests.swift */,
+				00000000000000000000061C /* ProjectStorageCatalogTests.swift */,
+			);
+			path = ArcShotTests;
+			sourceTree = "<group>";
+		};
+		000000000000000000000220 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000710 /* ArcShot.entitlements */,
+				000000000000000000000712 /* Assets.xcassets */,
+				000000000000000000000201 /* Info.plist */,
+				000000000000000000000707 /* InfoPlist.strings */,
+				000000000000000000000704 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		000000000000000000000236 /* Captions */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000233 /* CaptionGenerator.swift */,
+			);
+			path = Captions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000040 /* ArcShot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000500 /* Build configuration list for PBXNativeTarget "ArcShot" */;
+			buildPhases = (
+				000000000000000000000041 /* Sources */,
+				000000000000000000000030 /* Frameworks */,
+				000000000000000000000042 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArcShot;
+			productName = ArcShot;
+			productReference = 000000000000000000000010 /* ArcShot.app */;
+			productType = "com.apple.product-type.application";
+		};
+		000000000000000000000050 /* ArcShotTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 000000000000000000000501 /* Build configuration list for PBXNativeTarget "ArcShotTests" */;
+			buildPhases = (
+				000000000000000000000044 /* Sources */,
+				000000000000000000000031 /* Frameworks */,
+				000000000000000000000043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000000000000000062 /* PBXTargetDependency */,
+			);
+			name = ArcShotTests;
+			productName = ArcShotTests;
+			productReference = 000000000000000000000014 /* ArcShotTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000060 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					000000000000000000000040 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					000000000000000000000050 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = 000000000000000000000480 /* Build configuration list for PBXProject "ArcShot" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ja,
+				en,
+			);
+			mainGroup = 000000000000000000000000;
+			productRefGroup = 000000000000000000000020 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000040 /* ArcShot */,
+				000000000000000000000050 /* ArcShotTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		000000000000000000000042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000711 /* Assets.xcassets in Resources */,
+				000000000000000000000702 /* InfoPlist.strings in Resources */,
+				000000000000000000000701 /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		000000000000000000000041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000000000000000001C /* AppIdentifiers.swift in Sources */,
+				000000000000000000000700 /* AppLocalization.swift in Sources */,
+				000000000000000000000001 /* ArcShotApp.swift in Sources */,
+				000000000000000000000002 /* ContentView.swift in Sources */,
+				00000000000000000000021A /* AppChrome.swift in Sources */,
+				000000000000000000000011 /* AppAlertCenter.swift in Sources */,
+				000000000000000000000007 /* RecordingProject.swift in Sources */,
+				000000000000000000000627 /* RecordingAudioLevels.swift in Sources */,
+				00000000000000000000061F /* RecordingProjectAudioMix.swift in Sources */,
+				000000000000000000000623 /* CameraPiPDefaults.swift in Sources */,
+				000000000000000000000013 /* RecordingProjectExportStyle.swift in Sources */,
+				000000000000000000000008 /* ProjectStore.swift in Sources */,
+				000000000000000000000262 /* RecordingSessionFinalization.swift in Sources */,
+				000000000000000000000260 /* RecordingSelectionModel.swift in Sources */,
+				000000000000000000000215 /* ScreenCaptureAccess.swift in Sources */,
+				00000000000000000000022C /* PermissionsGateView.swift in Sources */,
+				000000000000000000000217 /* EditorView.swift in Sources */,
+				00000000000000000000022E /* VideoPreviewPane.swift in Sources */,
+				00000000000000000000022D /* CaptionGenerator.swift in Sources */,
+				000000000000000000000003 /* CaptureSource.swift in Sources */,
+				000000000000000000000005 /* RecordingCoordinator.swift in Sources */,
+				00000000000000000000022A /* FloatingRecordingWidget.swift in Sources */,
+				000000000000000000000263 /* RecordingLauncherBarDesign.swift in Sources */,
+				00000000000000000000022B /* MenuBarController.swift in Sources */,
+				00000000000000000000000F /* RecordingWriterSession.swift in Sources */,
+				000000000000000000000006 /* RecordView.swift in Sources */,
+				00000000000000000000000E /* CountdownOverlay.swift in Sources */,
+				00000000000000000000000D /* MicrophoneCapture.swift in Sources */,
+				000000000000000000000009 /* ReviewTrimView.swift in Sources */,
+				000000000000000000000018 /* ReviewTimelineUndoController.swift in Sources */,
+				000000000000000000000019 /* CursorZoomHeuristics.swift in Sources */,
+				000000000000000000000200 /* TimelineAudioWaveformLoader.swift in Sources */,
+				000000000000000000000210 /* CursorClickHeuristics.swift in Sources */,
+				000000000000000000000202 /* ExportMixedCompositionBuilder.swift in Sources */,
+				000000000000000000000203 /* CameraMovieCapture.swift in Sources */,
+				000000000000000000000625 /* CameraRecordingPreviewPanel.swift in Sources */,
+				000000000000000000000204 /* MultiClipCompositionDraft.swift in Sources */,
+				00000000000000000000022F /* AspectRatioPreset.swift in Sources */,
+				00000000000000000000000A /* ExportPreset.swift in Sources */,
+				00000000000000000000000B /* Exporter.swift in Sources */,
+				00000000000000000000070F /* ExportOutputAccess.swift in Sources */,
+				00000000000000000000000C /* ExportView.swift in Sources */,
+					000000000000000000000280 /* ArcShotVideoCompositor.swift in Sources */,
+					000000000000000000000281 /* ArcShotCompositionInstruction.swift in Sources */,
+					000000000000000000000282 /* ArcShotCompositionInstructionBuilder.swift in Sources */,
+					000000000000000000000283 /* CursorRenderer.swift in Sources */,
+					000000000000000000000714 /* VisualMaskStyle.swift in Sources */,
+					000000000000000000000288 /* ExportCompositionPlanner.swift in Sources */,
+					00000000000000000000028A /* ExportTimedDataMapper.swift in Sources */,
+					00000000000000000000028C /* ExportPIPTimelineSourceMapper.swift in Sources */,
+					00000000000000000000028E /* ExportOutputPromotion.swift in Sources */,
+					000000000000000000000290 /* ExportVideoPipelineFactory.swift in Sources */,
+					000000000000000000000292 /* ExportReaderWriterSession.swift in Sources */,
+					000000000000000000000270 /* ActivityClassifier.swift in Sources */,
+				000000000000000000000271 /* ZoomIntentPlanner.swift in Sources */,
+				000000000000000000000272 /* SpringDamperCamera.swift in Sources */,
+				000000000000000000000273 /* CameraTrack.swift in Sources */,
+				000000000000000000000274 /* AutoZoomPipeline.swift in Sources */,
+				000000000000000000000600 /* EditorLayout.swift in Sources */,
+				000000000000000000000601 /* TimelineModels.swift in Sources */,
+				000000000000000000000610 /* TimelineCoordinateSpace.swift in Sources */,
+				000000000000000000000602 /* EditorPlaybackController.swift in Sources */,
+				000000000000000000000603 /* EditorTimelineView.swift in Sources */,
+				000000000000000000000611 /* EditorTimelinePlayheadGhostSurface.swift in Sources */,
+				000000000000000000000615 /* EditorPreviewTimelineSplit.swift in Sources */,
+				000000000000000000000604 /* EditorTimelineTrimSurface.swift in Sources */,
+				000000000000000000000605 /* EditorInspectorPanel.swift in Sources */,
+				000000000000000000000617 /* ProjectStorageCatalog.swift in Sources */,
+				000000000000000000000619 /* ProjectLibraryView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000012 /* ArcShotTests.swift in Sources */,
+				000000000000000000000708 /* LocalizationTests.swift in Sources */,
+				000000000000000000000015 /* ExportSmokeTests.swift in Sources */,
+				00000000000000000000027A /* AutoZoomPipelineTests.swift in Sources */,
+				00000000000000000000061B /* ProjectStorageCatalogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000000000000000000000062 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000040 /* ArcShot */;
+			targetProxy = 000000000000000000000061 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		000000000000000000000707 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				000000000000000000000705 /* ja */,
+				000000000000000000000706 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = Resources/ArcShot.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_APP_INTENTS_METADATA_EXTRACTION = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.arcshot.ArcShot;
+				PRODUCT_NAME = ArcShot;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = Resources/ArcShot.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_APP_INTENTS_METADATA_EXTRACTION = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Resources/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.arcshot.ArcShot;
+				PRODUCT_NAME = ArcShot;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		000000000000000000000303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_INTENTS_METADATA_EXTRACTION = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.arcshot.ArcShotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcShot.app/Contents/MacOS/ArcShot";
+			};
+			name = Debug;
+		};
+		000000000000000000000304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_APP_INTENTS_METADATA_EXTRACTION = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.arcshot.ArcShotTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcShot.app/Contents/MacOS/ArcShot";
+			};
+			name = Release;
+		};
+		000000000000000000000401 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_USE_SEPARATE_HEADERMAPS = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000402 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_USE_SEPARATE_HEADERMAPS = YES;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		000000000000000000000480 /* Build configuration list for PBXProject "ArcShot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000401 /* Debug */,
+				000000000000000000000402 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		000000000000000000000500 /* Build configuration list for PBXNativeTarget "ArcShot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000301 /* Debug */,
+				000000000000000000000302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		000000000000000000000501 /* Build configuration list for PBXNativeTarget "ArcShotTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000303 /* Debug */,
+				000000000000000000000304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000060 /* Project object */;
+}

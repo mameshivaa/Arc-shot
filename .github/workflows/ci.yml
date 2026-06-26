@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Xcode build
+        run: |
+          xcodebuild \
+            -project ArcShot.xcodeproj \
+            -scheme ArcShot \
+            -configuration Release \
+            -sdk macosx \
+            build \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Xcode test
+        run: |
+          xcodebuild \
+            -project ArcShot.xcodeproj \
+            -scheme ArcShot \
+            -destination 'platform=macOS' \
+            test \
+            CODE_SIGNING_ALLOWED=NO

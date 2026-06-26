@@ -1,0 +1,6 @@
+NSScreenRecordingUsageDescription = "デモ動画作成のために画面を収録します。";
+NSScreenCaptureUsageDescription = "画面・ウィンドウを選択して収録します。システムの画面収録の許可が必要です。";
+NSAudioCaptureUsageDescription = "システム音声を収録するときのみ利用します。許可が必要な場合があります。";
+NSMicrophoneUsageDescription = "ナレーション用にマイク音声を収録できます。";
+NSCameraUsageDescription = "ピクチャ・イン・ピクチャで合成するためにカメラ映像を収録できます。";
+NSSpeechRecognitionUsageDescription = "字幕をローカル生成するために音声認識を利用します。";

@@ -1,0 +1,28 @@
+# Build artifacts
+.build/
+build/
+DerivedData/
+
+# IDE / local tooling
+.cursor/
+.ai/
+.claude/
+.serena/
+*.xcuserstate
+xcuserdata/
+**/*.xcuserdatad/
+
+# macOS
+.DS_Store
+
+# Local media from manual QA
+*.mov
+*.mp4
+!docs/**/*.mp4
+
+# Distribution artifacts
+*.pkg
+*.xcarchive
+
+# Optional: keep marketing screenshots out until sanitized
+# Marketing/

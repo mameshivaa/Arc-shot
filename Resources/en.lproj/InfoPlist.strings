@@ -1,0 +1,6 @@
+NSScreenRecordingUsageDescription = "ArcShot records the screen to create demo videos.";
+NSScreenCaptureUsageDescription = "ArcShot records selected screens and windows. Screen Recording permission is required.";
+NSAudioCaptureUsageDescription = "ArcShot uses system audio capture only when you choose to record system audio. Permission may be required.";
+NSMicrophoneUsageDescription = "ArcShot can record microphone audio for narration.";
+NSCameraUsageDescription = "ArcShot can record camera video for picture-in-picture composition.";
+NSSpeechRecognitionUsageDescription = "ArcShot uses speech recognition to generate captions locally.";

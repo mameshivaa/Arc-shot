@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>CFBundleDevelopmentRegion</key>
+  <string>$(DEVELOPMENT_LANGUAGE)</string>
+  <key>CFBundleExecutable</key>
+  <string>$(EXECUTABLE_NAME)</string>
+  <key>CFBundleIdentifier</key>
+  <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+  <key>CFBundleInfoDictionaryVersion</key>
+  <string>6.0</string>
+  <key>CFBundleName</key>
+  <string>$(PRODUCT_NAME)</string>
+  <key>CFBundlePackageType</key>
+  <string>APPL</string>
+  <key>CFBundleShortVersionString</key>
+  <string>1.0.3</string>
+  <key>CFBundleVersion</key>
+  <string>4</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>26.0</string>
+  <key>NSHumanReadableCopyright</key>
+  <string>Copyright © 2026 ArcShot. All Rights Reserved.</string>
+  <key>NSScreenRecordingUsageDescription</key>
+  <string>デモ動画作成のために画面を収録します。</string>
+  <key>NSScreenCaptureUsageDescription</key>
+  <string>画面・ウィンドウを選択して収録します。システムの画面収録の許可が必要です。</string>
+  <key>NSAudioCaptureUsageDescription</key>
+  <string>システム音声を収録するときのみ利用します。許可が必要な場合があります。</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>ナレーション用にマイク音声を収録できます。</string>
+  <key>NSCameraUsageDescription</key>
+  <string>ピクチャ・イン・ピクチャで合成するためにカメラ映像を収録できます。</string>
+  <key>NSSpeechRecognitionUsageDescription</key>
+  <string>字幕をローカル生成するために音声認識を利用します。</string>
+  <key>LSApplicationCategoryType</key>
+  <string>public.app-category.video</string>
+  <key>NSPrincipalClass</key>
+  <string>NSApplication</string>
+</dict>
+</plist>
