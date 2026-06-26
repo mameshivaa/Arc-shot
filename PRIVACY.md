@@ -31,4 +31,4 @@ ArcShot does not sell personal data. Future versions of this policy will list an
 
 ## Contact
 
-Open an issue at https://github.com/mameshivaa/ArcShot/issues
+Open an issue at https://github.com/mameshivaa/Arc-shot/issues

@@ -1,7 +1,7 @@
 # Closed Milestone — Capture / Export Stabilization (2025-06)
 
 **Status:** ✅ Closed and merged to `main`  
-**Merge:** [PR #1](https://github.com/mameshivaa/ArcShot/pull/1) (`e99bb23`)  
+**Merge:** PR #1 (`e99bb23`) — developed in the private repo before the public OSS release.  
 **Branch:** `fix/clip-trimming` (deleted after merge)
 
 ## What was delivered

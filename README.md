@@ -70,7 +70,7 @@ Uses the `-screenshotTour` launch flag to export App Store-style screenshots int
 
 ## Support
 
-- Issues: https://github.com/mameshivaa/ArcShot/issues
+- Issues: https://github.com/mameshivaa/Arc-shot/issues
 - Privacy: [`PRIVACY.md`](PRIVACY.md)
 
 ## License

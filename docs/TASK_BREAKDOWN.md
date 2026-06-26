@@ -514,7 +514,7 @@ Do these first, in order:
 
 ## Closed: 2025-06 Capture / Export Stabilization
 
-**Status:** complete — merged [PR #1](https://github.com/mameshivaa/ArcShot/pull/1) to `main`.
+**Status:** complete — merged PR #1 to `main` (pre-OSS private development).
 
 Closeout record: [`docs/CLOSED_MILESTONE_2025-06.md`](CLOSED_MILESTONE_2025-06.md)  
 Hard rules: [`docs/INVARIANTS.md`](INVARIANTS.md)  
