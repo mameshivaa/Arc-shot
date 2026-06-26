@@ -134,4 +134,4 @@ Run: `xcodebuild test -project ArcShot.xcodeproj -scheme ArcShot -destination 'p
 
 ## Related products (positioning)
 
-ArcShot targets **polished demo videos** (product walkthroughs, tutorials, bug reports) — not a screenshot manager or cloud Loom clone. Competitive references are documented in [`QUALITY_STANDARDS.md`](QUALITY_STANDARDS.md).
+ArcShot targets **polished demo videos** (product walkthroughs, tutorials, bug reports) — not a screenshot manager or cloud screen-recorder clone. Quality targets are documented in [`QUALITY_STANDARDS.md`](QUALITY_STANDARDS.md).

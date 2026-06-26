@@ -112,19 +112,29 @@ struct RecordView: View {
   }
 
   private var developerHintBanner: some View {
+    #if DEBUG
     Text("開発・検証向けキャプチャ画面です。ユーザー向けの録画開始は画面上のフローティング録画バーから行います（⌘⇧L）。")
       .font(.caption)
       .foregroundStyle(.secondary)
       .padding(.vertical, 6)
       .padding(.horizontal, 10)
       .background(Color.orange.opacity(0.07), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+    #else
+    EmptyView()
+    #endif
   }
 
   private var headerRow: some View {
     HStack(alignment: .firstTextBaseline) {
+      #if DEBUG
       Text("キャプチャ（開発ツール）")
         .font(.largeTitle.weight(.semibold))
         .accessibilityAddTraits(.isHeader)
+      #else
+      Text(languageStore.localized("キャプチャ"))
+        .font(.largeTitle.weight(.semibold))
+        .accessibilityAddTraits(.isHeader)
+      #endif
 
       Spacer()
 

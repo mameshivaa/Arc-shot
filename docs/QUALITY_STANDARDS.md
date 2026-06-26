@@ -59,13 +59,13 @@ A release is not ready unless all P0 criteria are true.
 
 ArcShot should not try to beat every competitor everywhere.
 
-| Competitor | Their strength | ArcShot quality target |
+| Category | Their strength | ArcShot quality target |
 | --- | --- | --- |
 | Premium subscription demo recorder | Polished demo output | Similar visual quality, free OSS, local-first, native architecture |
-| OpenScreen | Star power and feature volume | Better Mac-native reliability and easier local build/run story |
-| ScreenArc | OSS auto pan/zoom editor | More credible native macOS implementation and permissive license |
-| Tella/Loom | Cloud sharing and teams | Better local privacy, export fidelity, and no required account |
-| CleanShot X | Fast capture utility | Deeper demo video editing, not screenshot breadth |
+| High-visibility OSS recorder | Star power and feature volume | Better Mac-native reliability and easier local build/run story |
+| OSS auto pan/zoom editor | Community momentum | More credible native macOS implementation and permissive license |
+| Cloud screen recorder | Sharing and teams | Better local privacy, export fidelity, and no required account |
+| Screenshot-first capture utility | Fast still captures | Deeper demo video editing, not screenshot breadth |
 
 ## Feature Quality Criteria
 
@@ -156,5 +156,5 @@ ArcShot is ready for an OSS launch when:
 - Do not chase Windows or Linux before the macOS experience is excellent.
 - Do not add cloud sharing as a core dependency.
 - Do not compete with OBS on live streaming.
-- Do not compete with CleanShot X on screenshot breadth.
+- Do not compete with screenshot-first capture utilities on still-image breadth.
 - Do not add dependencies only to copy Electron-based competitors.

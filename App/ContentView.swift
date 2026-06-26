@@ -72,7 +72,7 @@ struct ContentView: View {
     }
     .onChange(of: workflowNav.sidebarTab) { _, tab in
       guard !hasCurrentProject, !tab.isAvailableWithoutOpenProject else { return }
-      workflowNav.sidebarTab = .capture
+      workflowNav.sidebarTab = WorkflowSidebarTab.defaultTabWithoutProject
     }
     .alert("ArcShot", isPresented: Binding(
       get: { alertCenter.current != nil },
@@ -100,7 +100,7 @@ struct ContentView: View {
   private var sidebarColumn: some View {
     List {
       Section {
-        ForEach(WorkflowSidebarTab.allCases) { tab in
+        ForEach(WorkflowSidebarTab.visibleTabs(screenshotTourActive: ScreenshotTour.isActive)) { tab in
           sidebarWorkflowButton(tab)
         }
       } header: {

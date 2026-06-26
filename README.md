@@ -219,11 +219,7 @@ Set your own **Development Team** in Xcode signing settings before archiving.
 
 ## Maintainer tools
 
-Regenerate marketing screenshots (requires local sample projects + screen recording permission):
-
-```sh
-./Scripts/capture-app-screenshots.sh
-```
+Screenshot automation (`-screenshotTour`) and `Scripts/capture-app-screenshots.sh` are **maintainer-only** and live in the private development repository, not this public tree.
 
 **Social preview** (GitHub のリンク用サムネイル): upload [`docs/assets/social-preview.png`](docs/assets/social-preview.png) (1280×640) in **GitHub → Settings → General → Social preview**.  
 X や Slack でリポジトリ URL を貼ったときに出る横長画像です。README のスクショとは別枠。

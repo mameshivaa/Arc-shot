@@ -127,6 +127,31 @@ enum WorkflowSidebarTab: String, CaseIterable, Identifiable {
 
   var id: String { rawValue }
 
+  /// Product sidebar tabs in Release; Capture is a DEBUG-only developer surface.
+  static var productTabs: [WorkflowSidebarTab] {
+    #if DEBUG
+    allCases
+    #else
+    [.library, .edit, .export]
+    #endif
+  }
+
+  /// Includes Capture when running automated screenshot capture in Release builds.
+  static func visibleTabs(screenshotTourActive: Bool) -> [WorkflowSidebarTab] {
+    if screenshotTourActive {
+      return allCases
+    }
+    return productTabs
+  }
+
+  static var defaultTabWithoutProject: WorkflowSidebarTab {
+    #if DEBUG
+    .capture
+    #else
+    .library
+    #endif
+  }
+
   var title: String {
     switch self {
     case .capture: return "キャプチャ"
@@ -167,7 +192,11 @@ enum WorkflowSidebarTab: String, CaseIterable, Identifiable {
 @MainActor
 @Observable
 final class WorkflowNavigator {
+  #if DEBUG
   var sidebarTab: WorkflowSidebarTab = .capture
+  #else
+  var sidebarTab: WorkflowSidebarTab = .library
+  #endif
   var showingReviewShortcutsHelp = false
 }
 
@@ -212,7 +241,7 @@ private final class MainWorkspaceWindowController {
       ArcShotRuntime.shared.hideCaptureSurfacesForEditor()
     }
     if window?.isVisible != true, workflowNavigator.sidebarTab != .library {
-      workflowNavigator.sidebarTab = projectStore.current == nil ? .capture : .edit
+      workflowNavigator.sidebarTab = projectStore.current == nil ? WorkflowSidebarTab.defaultTabWithoutProject : .edit
     }
     let isEditorPresentation = projectStore.current != nil
     let win = window ?? makeWindow(
@@ -416,7 +445,7 @@ struct ArcShotCommands: Commands {
 
   var body: some Commands {
     CommandMenu(languageStore.localized("ワークフロー")) {
-      ForEach(WorkflowSidebarTab.allCases) { tab in
+      ForEach(WorkflowSidebarTab.visibleTabs(screenshotTourActive: ScreenshotTour.isActive)) { tab in
         Button(languageStore.localized(tab.title)) {
           guard !isLocked(tab) else { return }
           navigator.sidebarTab = tab
