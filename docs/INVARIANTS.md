@@ -5,7 +5,6 @@ Read this before changing capture, cursor, launcher, or export code.
 
 Related docs:
 
-- `docs/QUALITY_STANDARDS.md` — release bar
 - `docs/MANUAL_VERIFICATION.md` — human QA matrix
 - `docs/export/PIPELINE.md` — compositor pipeline map
 

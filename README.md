@@ -207,7 +207,6 @@ Set your own **Development Team** in Xcode signing settings before archiving.
 | [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System design for readers / recruiters |
 | [`docs/articles/compositor-pipeline.md`](docs/articles/compositor-pipeline.md) | **Technical article** — capture → compositor → export |
 | [`docs/INVARIANTS.md`](docs/INVARIANTS.md) | Hard rules with regression backing |
-| [`docs/QUALITY_STANDARDS.md`](docs/QUALITY_STANDARDS.md) | Release quality bar |
 | [`docs/MANUAL_VERIFICATION.md`](docs/MANUAL_VERIFICATION.md) | Manual QA matrix |
 | [`docs/export/PIPELINE.md`](docs/export/PIPELINE.md) | Export pipeline map |
 | [`docs/DISTRIBUTION.md`](docs/DISTRIBUTION.md) | What you may redistribute (no App Store) |
@@ -217,14 +216,7 @@ Set your own **Development Team** in Xcode signing settings before archiving.
 
 ---
 
-## Maintainer tools
-
-Screenshot automation (`-screenshotTour`) and `Scripts/capture-app-screenshots.sh` are **maintainer-only** and live in the private development repository, not this public tree.
-
-**Social preview** (GitHub のリンク用サムネイル): upload [`docs/assets/social-preview.png`](docs/assets/social-preview.png) (1280×640) in **GitHub → Settings → General → Social preview**.  
-X や Slack でリポジトリ URL を貼ったときに出る横長画像です。README のスクショとは別枠。
-
-**App icon:** [`docs/assets/app-icon.png`](docs/assets/app-icon.png) (512×512, copy of `Resources/Assets.xcassets/AppIcon.appiconset/`).
+**Social preview:** upload [`docs/assets/social-preview.png`](docs/assets/social-preview.png) (1280×640) in GitHub → Settings → General → Social preview.
 
 ---
 

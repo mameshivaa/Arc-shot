@@ -60,10 +60,6 @@ final class FloatingRecordingLauncherController {
     dismissSystemWindowPickerIfNeeded()
   }
 
-  func marketingScreenshotWindow() -> NSWindow? {
-    panel
-  }
-
   func bind(
     coordinator: RecordingCoordinator,
     selectionModel: RecordingSelectionModel,

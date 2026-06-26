@@ -1,7 +1,6 @@
 import AppKit
 import Carbon.HIToolbox
 import Observation
-import ScreenCaptureKit
 import SwiftUI
 
 // MARK: - Runtime
@@ -80,18 +79,6 @@ final class ArcShotRuntime {
     #endif
   }
 
-  func workspaceWindowForMarketingScreenshot() -> NSWindow? {
-    workspaceWindowController.screenshotWindow
-  }
-
-  func recordingLauncherWindowForMarketingScreenshot() -> NSWindow? {
-    floatingRecordingLauncherController.marketingScreenshotWindow()
-  }
-
-  func applyMarketingScreenshotFrame() {
-    workspaceWindowController.applyMarketingScreenshotFrame()
-  }
-
   func handleUserReopen() {
     if recordingCoordinator.state == .recording || recordingCoordinator.state == .armed || projectStore.current == nil {
       recordingCoordinator.setFloatingLauncherVisible(true)
@@ -134,14 +121,6 @@ enum WorkflowSidebarTab: String, CaseIterable, Identifiable {
     #else
     [.library, .edit, .export]
     #endif
-  }
-
-  /// Includes Capture when running automated screenshot capture in Release builds.
-  static func visibleTabs(screenshotTourActive: Bool) -> [WorkflowSidebarTab] {
-    if screenshotTourActive {
-      return allCases
-    }
-    return productTabs
   }
 
   static var defaultTabWithoutProject: WorkflowSidebarTab {
@@ -267,21 +246,6 @@ private final class MainWorkspaceWindowController {
   func hide() {
     window?.orderOut(nil)
   }
-
-  func applyMarketingScreenshotFrame() {
-    guard let window else { return }
-    let size = NSSize(width: 1280, height: 800)
-    let screen = window.screen ?? NSScreen.main ?? NSScreen.screens[0]
-    let visible = screen.visibleFrame
-    let origin = NSPoint(
-      x: visible.midX - size.width / 2,
-      y: visible.midY - size.height / 2
-    )
-    window.setFrame(NSRect(origin: origin, size: size), display: true, animate: false)
-    window.contentView?.layoutSubtreeIfNeeded()
-  }
-
-  var screenshotWindow: NSWindow? { window }
 
   private func makeWindow(
     projectStore: ProjectStore,
@@ -445,7 +409,7 @@ struct ArcShotCommands: Commands {
 
   var body: some Commands {
     CommandMenu(languageStore.localized("ワークフロー")) {
-      ForEach(WorkflowSidebarTab.visibleTabs(screenshotTourActive: ScreenshotTour.isActive)) { tab in
+      ForEach(WorkflowSidebarTab.productTabs) { tab in
         Button(languageStore.localized(tab.title)) {
           guard !isLocked(tab) else { return }
           navigator.sidebarTab = tab
@@ -625,135 +589,6 @@ final class GlobalRecordingShortcutController {
 }
 
 @MainActor
-enum ScreenshotTour {
-  static let launchFlag = "-screenshotTour"
-
-  static func outputDirectory(from arguments: [String] = ProcessInfo.processInfo.arguments) -> URL? {
-    guard let index = arguments.firstIndex(of: launchFlag),
-      arguments.indices.contains(index + 1)
-    else { return nil }
-    return URL(fileURLWithPath: arguments[index + 1], isDirectory: true)
-  }
-
-  static var isActive: Bool {
-    ProcessInfo.processInfo.arguments.contains(launchFlag)
-  }
-
-  static func run(outputDirectory: URL) async {
-    UserDefaults.standard.set(
-      true,
-      forKey: AppIdentifiers.UserDefaultsKeys.recordingPermissionIntroCompleted
-    )
-
-    let runtime = ArcShotRuntime.shared
-    try? FileManager.default.createDirectory(at: outputDirectory, withIntermediateDirectories: true)
-
-    for _ in 0 ..< 24 {
-      if !runtime.projectStore.projects.isEmpty { break }
-      try? await Task.sleep(nanoseconds: 250_000_000)
-    }
-
-    if let firstProject = runtime.projectStore.projects.first {
-      runtime.projectStore.loadProject(id: firstProject.id)
-    }
-
-    runtime.showWorkspace()
-    try? await Task.sleep(nanoseconds: 900_000_000)
-    runtime.applyMarketingScreenshotFrame()
-    try? await Task.sleep(nanoseconds: 400_000_000)
-
-    var captures: [(WorkflowSidebarTab, String)] = [
-      (.capture, "01-capture.png"),
-      (.library, "02-library.png"),
-    ]
-    if runtime.projectStore.current != nil {
-      captures.append(contentsOf: [
-        (.edit, "03-editor.png"),
-        (.export, "04-export.png"),
-      ])
-    }
-
-    for (tab, filename) in captures {
-      runtime.workflowNavigator.sidebarTab = tab
-      try? await Task.sleep(nanoseconds: 1_100_000_000)
-      if let window = runtime.workspaceWindowForMarketingScreenshot() {
-        prepareWindowForCapture(window)
-        try? await writePNG(from: window, to: outputDirectory.appendingPathComponent(filename))
-      }
-    }
-
-    runtime.recordingCoordinator.setFloatingLauncherVisible(true)
-    try? await Task.sleep(nanoseconds: 700_000_000)
-    if let launcher = runtime.recordingLauncherWindowForMarketingScreenshot() {
-      prepareWindowForCapture(launcher)
-      try? await writePNG(from: launcher, to: outputDirectory.appendingPathComponent("05-recording-launcher.png"))
-    }
-  }
-
-  private static func prepareWindowForCapture(_ window: NSWindow) {
-    window.makeKeyAndOrderFront(nil)
-    window.contentView?.layoutSubtreeIfNeeded()
-    window.displayIfNeeded()
-    NSApp.updateWindows()
-    RunLoop.current.run(until: Date(timeIntervalSinceNow: 0.08))
-  }
-
-  private static func writePNG(from window: NSWindow, to url: URL) async throws {
-    if let data = await windowScreenshotPNGData(window) {
-      try data.write(to: url, options: .atomic)
-      return
-    }
-
-    guard let contentView = window.contentView else {
-      throw CocoaError(.fileNoSuchFile)
-    }
-    contentView.layoutSubtreeIfNeeded()
-    let bounds = contentView.bounds
-    guard let representation = contentView.bitmapImageRepForCachingDisplay(in: bounds) else {
-      throw CocoaError(.fileWriteUnknown)
-    }
-    contentView.cacheDisplay(in: bounds, to: representation)
-    guard let data = representation.representation(using: .png, properties: [:]) else {
-      throw CocoaError(.fileWriteUnknown)
-    }
-    try data.write(to: url, options: .atomic)
-  }
-
-  /// Uses ScreenCaptureKit so NavigationSplitView sidebars and materials render correctly.
-  private static func windowScreenshotPNGData(_ window: NSWindow) async -> Data? {
-    let windowID = CGWindowID(window.windowNumber)
-    guard windowID != 0 else { return nil }
-
-    do {
-      let content = try await SCShareableContent.excludingDesktopWindows(false, onScreenWindowsOnly: true)
-      let bundleID = Bundle.main.bundleIdentifier
-      let scWindow =
-        content.windows.first(where: { $0.windowID == windowID })
-        ?? content.windows
-        .filter { $0.owningApplication?.bundleIdentifier == bundleID }
-        .max(by: { ($0.frame.width * $0.frame.height) < ($1.frame.width * $1.frame.height) })
-
-      guard let scWindow else {
-        return nil
-      }
-
-      let filter = SCContentFilter(desktopIndependentWindow: scWindow)
-      let config = SCStreamConfiguration()
-      let scale = max(1, window.backingScaleFactor.rounded())
-      config.width = Int(scWindow.frame.width * scale)
-      config.height = Int(scWindow.frame.height * scale)
-      config.showsCursor = false
-
-      let cgImage = try await SCScreenshotManager.captureImage(contentFilter: filter, configuration: config)
-      let bitmap = NSBitmapImageRep(cgImage: cgImage)
-      return bitmap.representation(using: .png, properties: [:])
-    } catch {
-      return nil
-    }
-  }
-}
-
-@MainActor
 final class ArcShotApplicationDelegate: NSObject, NSApplicationDelegate {
   private let dockMenu = NSMenu()
   private let stopItem = NSMenuItem(title: "録画を停止", action: #selector(stopRecording), keyEquivalent: "")
@@ -769,13 +604,6 @@ final class ArcShotApplicationDelegate: NSObject, NSApplicationDelegate {
       dockMenu.addItem(discardItem)
     }
     refreshDockMenu()
-
-    if let outputDirectory = ScreenshotTour.outputDirectory() {
-      Task {
-        await ScreenshotTour.run(outputDirectory: outputDirectory)
-        NSApp.terminate(nil)
-      }
-    }
   }
 
   func applicationDidBecomeActive(_ notification: Notification) {

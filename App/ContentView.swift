@@ -31,8 +31,6 @@ struct ContentView: View {
         .onAppear {
           recordingCoordinator.setFloatingLauncherVisible(false)
         }
-      } else if ScreenshotTour.isActive {
-        screenshotTourWorkspace
       } else {
         NavigationSplitView {
           sidebarColumn
@@ -100,7 +98,7 @@ struct ContentView: View {
   private var sidebarColumn: some View {
     List {
       Section {
-        ForEach(WorkflowSidebarTab.visibleTabs(screenshotTourActive: ScreenshotTour.isActive)) { tab in
+        ForEach(WorkflowSidebarTab.productTabs) { tab in
           sidebarWorkflowButton(tab)
         }
       } header: {
@@ -128,17 +126,6 @@ struct ContentView: View {
     }
     .listStyle(.sidebar)
     .navigationSplitViewColumnWidth(min: 200, ideal: 248)
-  }
-
-  private var screenshotTourWorkspace: some View {
-    HStack(spacing: 0) {
-      sidebarColumn
-        .frame(width: 248)
-        .background(Color(nsColor: .windowBackgroundColor))
-      Divider()
-      detailColumn
-    }
-    .frame(maxWidth: .infinity, maxHeight: .infinity)
   }
 
   @ViewBuilder
