@@ -5,7 +5,7 @@
 </p>
 
 > **Swift-native macOS demo recorder** — floating launcher, multi-track timeline, custom `AVVideoCompositing` export.  
-> **$7.99 one-time** · **full source on GitHub** · **260+ tests** · no subscription · no Electron
+> **$7.99 one-time** · **full source on GitHub** ·· no subscription · no Electron
 
 **A Swift-native macOS screen recorder and demo video editor — open source.**
 
